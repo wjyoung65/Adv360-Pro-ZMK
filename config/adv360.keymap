@@ -1,17 +1,17 @@
-#include <behaviors.dtsi>
+#nclude <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 
-#define LSFT_T(k)  &mt LSHFT k
-#define RSFT_T(k)  &mt RSHFT k
+#define LSFT_T(k)  &hm LSHFT k
+#define RSFT_T(k)  &hm RSHFT k
 
-#define LCTL_T(k)  &mt LCTRL k
-#define RCTL_T(k)  &mt RCTRL k
+#define LCTL_T(k)  &hm LCTRL k
+#define RCTL_T(k)  &hm RCTRL k
 
-#define LALT_T(k)  &mt LALT k
-#define RALT_T(k)  &mt RALT k
+#define LALT_T(k)  &hm LALT k
+#define RALT_T(k)  &hm RALT k
 
 / {
     behaviors {
