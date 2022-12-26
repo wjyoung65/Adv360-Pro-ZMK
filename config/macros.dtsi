@@ -42,12 +42,16 @@
     tap-ms = <40>;
     bindings = <&kp D>, <&kp B>, <&kp N2>;
   };
-  macro_db2: macro_top {
+  macro_top: macro_top {
     compatible = "zmk,behavior-macro";
-    label = "macro_db2";
+    label = "macro_top";
     #binding-cells = <0>;
     wait-ms = <40>;
     tap-ms = <40>;
-    bindings = <&kp LS(4)>, <&kp LS(T)>, <&kp LS(O)>, <&kp LS(P)>;
+    bindings =
+      = <&macro_press &kp LSHFT>
+      , <&macro_tap &kp N4 &kp T &kp O &kp P>
+      , <&macro_release &kp LSHFT>
+      ;
   };
-  #todo: wjylog, nvim, COPTS, 
+//todo: wjylog, nvim, COPTS, 
