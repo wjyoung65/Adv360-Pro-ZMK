@@ -62,7 +62,7 @@
     tap-ms = <40>;
     bindings
       = <&macro_tap &kp W &kp J &kp Y &kp L &kp O &kp G &kp>
-      , <&kp LS(N9)>, <&kp LS(SQT)>, <&kp BSLH>, <&kp N>, <&kp LS(SQT)>, <&kp LS(N0)>, <&kp SEMI>;
+      , <&kp LS(N9)>, <&kp LS(SQT)>, <&kp BSLH>, <&kp N>, <&kp LS(SQT)>, <&kp LS(N0)>, <&kp SEMI>
       , <&kp LEFT>, <&kp LEFT>, <&kp LEFT>, <&kp LEFT>, <&kp LEFT>
       ;
   };
