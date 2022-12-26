@@ -14,12 +14,6 @@
 #define RALT_T(k)  &hm RALT k
 
 / {
-    ZMK_MACRO(db2,
-      wait-ms = <30>;
-      tap-ms = <40>;
-      bindings = <[&kp d &kp b &kb w>;
-    )
-
     behaviors {
       #include "macros.dtsi"
 
@@ -31,7 +25,13 @@
           quick_tap_ms = <175>;
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
-      };;
+      };
+
+      ZMK_MACRO(db2,
+        wait-ms = <30>;
+        tap-ms = <40>;
+        bindings = <[&kp d &kp b &kb w>;
+      )
     };
 
   keymap {
