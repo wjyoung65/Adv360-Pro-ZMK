@@ -84,7 +84,7 @@
       = <&macro_press &kp LSHFT>
       , <&macro_tap &kp C &kp O &kp P &kp T &kp S>
       , <&macro_release &kp LSHFT>
-      , <&kp EQUAL>, <&kp LS(SQT)>, <&kp MINUS>, <&kp G>, <&kp SPACE>, <&kp LS(MINUS)>, <&kp LS(O)>, <&kp N0>, <&kp LS(SQT)
+      , <&kp EQUAL>, <&kp LS(SQT)>, <&kp MINUS>, <&kp G>, <&kp SPACE>, <&kp LS(MINUS)>, <&kp LS(O)>, <&kp N0>, <&kp LS(SQT)>
       , <&kp SPACE>, <&kp B>, <&kp L>, <&kp D>
       ;
   };
