@@ -48,7 +48,7 @@
     #binding-cells = <0>;
     wait-ms = <40>;
     tap-ms = <40>;
-    bindings = <&kp N>, <&kp V>, <&kp I>, <&kb M>;
+    bindings = <&kp N>, <&kp V>, <&kp I>, <&kp M>;
   };
   macro_top: macro_top {
     compatible = "zmk,behavior-macro";
