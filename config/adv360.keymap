@@ -32,13 +32,13 @@
       ZMK_MACRO(macro_db2,
         wait-ms = <30>;
         tap-ms = <40>;
-        bindings = <&kp d &kp b &kb 2>;
+        bindings = <&kp d &kp b &kb N2>;
       )
 
       ZMK_MACRO(macro_DB2,
         wait-ms = <30>;
         tap-ms = <40>;
-        bindings = <&kp D &kp B &kb 2>;
+        bindings = <&kp D &kp B &kb N2>;
       )
     };
 
