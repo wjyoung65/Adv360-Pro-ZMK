@@ -48,7 +48,7 @@
     #binding-cells = <0>;
     wait-ms = <40>;
     tap-ms = <40>;
-    bindings =
+    bindings
       = <&macro_press &kp LSHFT>
       , <&macro_tap &kp N4 &kp T &kp O &kp P>
       , <&macro_release &kp LSHFT>
