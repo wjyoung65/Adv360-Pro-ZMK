@@ -30,7 +30,13 @@
       ZMK_MACRO(db2,
         wait-ms = <30>;
         tap-ms = <40>;
-        bindings = <[&kp d &kp b &kb w>;
+        bindings = <&kp d &kp b &kb 2>;
+      )
+
+      ZMK_MACRO(DB2,
+        wait-ms = <30>;
+        tap-ms = <40>;
+        bindings = <&kp D &kp B &kb 2>;
       )
     };
 
@@ -41,7 +47,7 @@
       bindings = <
         &kp EQUAL    &kp N1    &kp N2     &kp N3       &kp N4      &kp N5 &tog 1                                                                        &mo 3 &kp N6 &kp N7  &kp N8         &kp N9      &kp N0    &kp MINUS
         &kp TAB      &kp Q     &kp W      &kp E        &kp R       &kp T  &db2                                                                          &none &kp Y  &kp U   &kp I          &kp O       &kp P     &kp BSLH
-        LCTL_T(ESC)  &kp A     &kp S      &kp D        &kp F       &kp G  &none            &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           &none &kp H  &kp J   &kp K          &kp L       &kp SEMI  &kp SQT
+        LCTL_T(ESC)  &kp A     &kp S      &kp D        &kp F       &kp G  &DB2             &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           &none &kp H  &kp J   &kp K          &kp L       &kp SEMI  &kp SQT
         &kp LSHFT    &kp Z     &kp X      &kp C        &kp V       &kp B         &none     &none     &kp HOME &none &none &kp PG_UP &none     &none           &kp N  &kp M   RCTL_T(COMMA)  LALT_T(DOT) &kp FSLH  &kp RSHFT
         &mo 2        &kp GRAVE &kp INS    &kp LEFT     &kp RIGHT                 &kp BSPC  &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE              &kp UP  &kp DOWN       &kp LBKT    &kp RBKT  &mo 2
       >;
