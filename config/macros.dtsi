@@ -40,9 +40,3 @@
     #binding-cells = <0>;
     bindings = <&kp D>, <&kp B>, <&kp N2>;
   };
-  macro_DB2: macro_DB2 {
-    compatible = "zmk,behavior-macro";
-    label = "macro_DB2";
-    #binding-cells = <0>;
-    bindings = <&kp LS(D)>, <&kp LS(B)>, <&kp N2>;
-  };
