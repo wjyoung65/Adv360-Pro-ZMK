@@ -38,5 +38,7 @@
     compatible = "zmk,behavior-macro";
     label = "macro_db2";
     #binding-cells = <0>;
+    wait-ms = <40>;
+    tap-ms = <40>;
     bindings = <&kp D>, <&kp B>, <&kp N2>;
   };
