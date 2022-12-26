@@ -42,28 +42,49 @@
     tap-ms = <40>;
     bindings = <&kp D>, <&kp B>, <&kp N2>;
   };
+  macro_nvim: macro_nvim {
+    compatible = "zmk,behavior-macro";
+    label = "macro_nvim";
+    #binding-cells = <0>;
+    wait-ms = <40>;
+    tap-ms = <40>;
+    bindings = <&kp N>, <&kp V>, <&kp I>, <&kb M>;
+  };
   macro_top: macro_top {
     compatible = "zmk,behavior-macro";
     label = "macro_top";
     #binding-cells = <0>;
-    wait-ms = <40>;
-    tap-ms = <40>;
+    wait-ms = <20>;
+    tap-ms = <20>;
     bindings
       = <&macro_press &kp LSHFT>
       , <&macro_tap &kp N4 &kp T &kp O &kp P>
       , <&macro_release &kp LSHFT>
       ;
   };
-  macro_wjy: macro_wjy {
+  macro_wjylog: macro_wjylog {
     compatible = "zmk,behavior-macro";
-    label = "macro_wjy";
+    label = "macro_wjylog";
     #binding-cells = <0>;
-    wait-ms = <40>;
-    tap-ms = <40>;
+    wait-ms = <20>;
+    tap-ms = <20>;
     bindings
       = <&macro_tap &kp W &kp J &kp Y &kp L &kp O &kp G>
       , <&kp LS(N9)>, <&kp LS(SQT)>, <&kp BSLH>, <&kp N>, <&kp LS(SQT)>, <&kp LS(N0)>, <&kp SEMI>
       , <&kp LEFT>, <&kp LEFT>, <&kp LEFT>, <&kp LEFT>, <&kp LEFT>
       ;
   };
-//todo: wjylog, nvim, COPTS, 
+  macro_copts: macro_copts {
+    compatible = "zmk,behavior-macro";
+    label = "macro_copts";
+    #binding-cells = <0>;
+    wait-ms = <20>;
+    tap-ms = <20>;
+    bindings
+      = <&macro_press &kp LSHFT>
+      , <&macro_tap &kp C &kp O &kp P &kp T &kp S>
+      , <&macro_release &kp LSHFT>
+      , <&kp EQUAL>, <&kp LS(SQT)>, <&kp MINUS>, <&kp G>, <&kp SPACE>, <&kp LS(MINUS)>, <&kp LS(O)>, <&kp N0>, <&kp LS(SQT)
+      , <&kp SPACE>, <&kp B>, <&kp L>, <&kp D>
+      ;
+  };
