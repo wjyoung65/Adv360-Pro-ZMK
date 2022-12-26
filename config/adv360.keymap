@@ -27,7 +27,7 @@
           bindings = <&kp>, <&kp>;
       };
 
-      macros (
+      macros {
         ZMK_MACRO(macro_db2,
           wait-ms = <30>;
           tap-ms = <40>;
@@ -39,7 +39,7 @@
           tap-ms = <40>;
           bindings = <&kp D &kp B &kb 2>;
         )
-      );
+      };
     };
 
   keymap {
