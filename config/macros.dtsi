@@ -42,3 +42,12 @@
     tap-ms = <40>;
     bindings = <&kp D>, <&kp B>, <&kp N2>;
   };
+  macro_db2: macro_top {
+    compatible = "zmk,behavior-macro";
+    label = "macro_db2";
+    #binding-cells = <0>;
+    wait-ms = <40>;
+    tap-ms = <40>;
+    bindings = <&kp LS(4)>, <&kp LS(T)>, <&kp LS(O)>, <&kp LS(P)>;
+  };
+  #todo: wjylog, nvim, COPTS, 
