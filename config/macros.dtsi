@@ -58,8 +58,9 @@
     tap-ms = <40>;
     bindings
       = <&macro_press &kp LSHFT>
-      , <&macro_tap &kp N4 &kp T &kp O &kp P &kp FSLH>
+      , <&macro_tap &kp N4 &kp T &kp O &kp P>
       , <&macro_release &kp LSHFT>
+      , <&macro_tap &kp FSLH>
       ;
   };
   macro_wjylog: macro_wjylog {
