@@ -82,7 +82,7 @@
     tap-ms = <40>;
     bindings
       = <&kp LS(C)>, <&kp LS(O)>, <&kp LS(P)>, <&kp LS(T)>, <&kp LS(S)>
-      , <&kp EQUAL>, <&kp LS(SQT)>, <&kp MINUS>, <&kp G>, <&kp SPACE>, <&kp LS(MINUS)>, <&kp LS(O)>, <&kp N0>, <&kp LS(SQT)>
+      , <&kp EQUAL>, <&kp LS(SQT)>, <&kp MINUS>, <&kp G>, <&kp SPACE>, <&kp MINUS>, <&kp LS(O)>, <&kp N0>, <&kp LS(SQT)>
+      , <&kp SPACE>, <&kp B>, <&kp L>, <&kp D>
       ;
   };
-//      , <&kp SPACE>, <&kp B>, <&kp L>, <&kp D>
