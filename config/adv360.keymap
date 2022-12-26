@@ -28,14 +28,6 @@
       };
     };
 
-    macros {
-      ZMK_MACRO(macro_db2,
-        wait-ms = <30>;
-        tap-ms = <40>;
-        bindings = <&kp d &kp b>;
-      )
-    };
-
   keymap {
     compatible = "zmk,keymap";
 
