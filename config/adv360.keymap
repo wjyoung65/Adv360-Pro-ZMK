@@ -15,7 +15,7 @@
 #define MC_TOP    &macro_top
 #define MC_NVIM   &macro_nvim
 #define MC_COPTS  &macro_copts
-#define MC_WJY    &macro_wjylog
+#define MC_WJYLOG &macro_wjylog
 
 // Select bluetooth channel
 #define SELBT(x)  &bt BT_SEL x
