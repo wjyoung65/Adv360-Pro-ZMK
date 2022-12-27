@@ -4,20 +4,36 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 
-#define LSFT_T(k)  &hm LSHFT k
-#define RSFT_T(k)  &hm RSHFT k
+#define LSFT(k)  &hm LSHFT k
+#define RSFT(k)  &hm RSHFT k
 
-#define LCTL_T(k)  &hm LCTRL k
-#define RCTL_T(k)  &hm RCTRL k
+#define LCTL(k)  &hm LCTRL k
+#define RCTL(k)  &hm RCTRL k
 
 #define LALT_T(k)  &hm LALT k
 #define RALT_T(k)  &hm RALT k
 
+// more consise forms of the macros
 #define MC_DB2    &macro_db2
 #define MC_TOP    &macro_top
 #define MC_NVIM   &macro_nvim
 #define MC_COPTS  &macro_copts
-#define MC_WJYLOG &macro_wjylog
+#define MC_WJY    &macro_wjylog
+
+// Select bluetooth channel
+#define SELBT(x)  &bt BT_SEL x
+
+// toggle status LEDs
+#define TGL_LED &rgb_ug RGB_TOG
+
+// toggle backlight LEDs
+#define TGL_BL  &bl BL_TOG
+
+// Clear bluetooth
+#define CLR_BT  &bt BT_CLR
+
+// show battery level
+#define BAT_LVL &rgb_ug RGB_MEFS_CMD 5
 
 / {
     behaviors {
@@ -39,39 +55,40 @@
 
     default_layer {
       bindings = <
-        &kp EQUAL    &kp N1    &kp N2     &kp N3     &kp N4     &kp N5 &tog 1                                                                        &mo 3 &kp N6 &kp N7  &kp N8         &kp N9      &kp N0    &kp MINUS
-        &kp TAB      &kp Q     &kp W      &kp E      &kp R      &kp T  MC_DB2                                                                        &none &kp Y  &kp U   &kp I          &kp O       &kp P     &kp BSLH
-        LCTL_T(ESC)  &kp A     &kp S      &kp D      &kp F      &kp G  MC_WJYLOG        &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           &none &kp H  &kp J   &kp K          &kp L       &kp SEMI  &kp SQT
-        &kp LSHFT    &kp Z     &kp X      &kp C      &kp V      &kp B         &none     &none     &kp HOME &none &none &kp PG_UP &none     &none           &kp N  &kp M   RCTL_T(COMMA)  LALT_T(DOT) &kp FSLH  &kp RSHFT
-        &mo 2        &kp GRAVE &kp INS    &kp LEFT   &kp RIGHT                &kp BSPC  &kp TAB   &kp END              &kp PG_DN &kp ENTER &kp SPACE              &kp UP  &kp DOWN       &kp LBKT    &kp RBKT  &mo 2
+        &kp EQUAL  &kp N1    &kp N2    &kp N3     &kp N4     &kp N5 &tog 1                                                                       &mo 3 &kp N6 &kp N7  &kp N8      &kp N9      &kp N0    &kp MINUS
+        &kp TAB    &kp Q     &kp W     &kp E      &kp R      &kp T  MC_DB2                                                                       &none &kp Y  &kp U   &kp I       &kp O       &kp P     &kp BSLH
+        LCTL(ESC)  &kp A     &kp S     &kp D      &kp F      &kp G  MC_WJY           &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL          &none &kp H  &kp J   &kp K       &kp L       &kp SEMI  &kp SQT
+        &kp LSHFT  &kp Z     &kp X     &kp C      &kp V      &kp B         &none     &none     &kp HOME &none &none &kp PG_UP &none     &none          &kp N  &kp M   RCTL(COMMA) LALT_T(DOT) &kp FSLH  &kp RSHFT
+        &mo 2      &kp GRAVE &kp INS   &kp LEFT   &kp RIGHT                &kp BSPC  &kp TAB   &kp END              &kp PG_DN &kp ENTER &kp SPACE              &kp UP  &kp DOWN    &kp LBKT    &kp RBKT  &mo 2
       >;
     };
     keypad {
       bindings = <
-        &kp EQUAL    &kp N1    &kp N2     &kp N3     &kp N4     &kp N5 &trans                                                                       &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
-        &kp TAB      &kp Q     &kp W      &kp E      &kp R      &kp T  &none                                                                        &none &kp Y  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
-        LCTL_T(ESC)  &kp A     &kp S      &kp D      &kp F      &kp G  &none            &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL          &none &kp H  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &trans
-        &kp LSHFT    &kp Z     &kp X      &kp C      &kp V      &kp B         &none     &none     &kp HOME &none &none &kp PG_UP &none     &none          &kp N  &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp RSHFT
-        &mo 2        &trans    &trans     &trans     &trans                   &kp BSPC  &kp TAB   &kp END              &kp PG_DN &kp ENTER &kp KP_N0             &kp UP     &kp DOWN     &kp KP_DOT    &trans          &mo 2
+        &kp EQUAL  &kp N1    &kp N2    &kp N3     &kp N4     &kp N5 &trans                                                                       &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
+        &kp TAB    &kp Q     &kp W     &kp E      &kp R      &kp T  &none                                                                        &none &kp Y  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
+        LCTL(ESC)  &kp A     &kp S     &kp D      &kp F      &kp G  &none            &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL          &none &kp H  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &trans
+        &kp LSHFT  &kp Z     &kp X     &kp C      &kp V      &kp B         &none     &none     &kp HOME &none &none &kp PG_UP &none     &none          &kp N  &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp RSHFT
+        &mo 2      &trans    &trans    &trans     &trans                   &kp BSPC  &kp TAB   &kp END              &kp PG_DN &kp ENTER &kp KP_N0             &kp UP     &kp DOWN     &kp KP_DOT    &trans          &mo 2
       >;
     };
     fn {
       bindings = <
-        &kp F1       &kp F2    &kp F3     &kp F4     &kp F5     &kp F6     &tog 1                                                       &mo 3 &kp F7   &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-        &trans       &trans    MC_WJYLOG  &trans     &trans     MC_TOP     &none                                                        &none &trans   &trans &trans &trans  &trans  &trans
-        &trans       &trans    &trans     MC_DB2     &trans     &trans     &none         &trans &trans             &trans &trans        &none &trans   &trans &trans &trans  &trans  &trans
-        &trans       &trans    &trans     MC_COPTS   &trans     &trans           &none   &none  &trans &none &none &trans &none  &none        MC_NVIM  &trans &trans &trans  &trans  &trans
-        &trans       &trans    &trans     &trans     &trans                      &kp DEL &trans &trans             &trans &trans &trans                &trans &trans &trans  &trans  &trans
+        &kp F1     &kp F2    &kp F3    &kp F4     &kp F5     &kp F6 &tog 1                                                       &mo 3 &kp F7   &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+        &trans     &trans    MC_WJYLOG &trans     &trans     MC_TOP &none                                                        &none &trans   &trans &trans &trans  &trans  &trans
+        &trans     &trans    &trans    MC_DB2     &trans     &trans &none          &trans &trans             &trans &trans       &none &trans   &trans &trans &trans  &trans  &trans
+        &trans     &trans    &trans    MC_COPTS   &trans     &trans        &none   &none  &trans &none &none &trans &none  &none       MC_NVIM  &trans &trans &trans  &trans  &trans
+        &trans     &trans    &trans    &trans     &trans                   &kp DEL &trans &trans             &trans &trans &trans               &trans &trans &trans  &trans  &trans
       >;
     };
     mod {
       bindings = <
-        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                                                          &trans                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
-        &none &none        &none        &none        &none        &none        &bootloader                                                                                                    &bootloader            &none        &none        &none        &none        &none        &none
-        &none &none        &none        &none        &none        &none        &rgb_ug RGB_MEFS_CMD 5                 &bt BT_CLR &bt BT_CLR             &bt BT_CLR &bt BT_CLR                 &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none        &none        &none
-        &none &none        &none        &none        &none        &none                               &none           &none      &none      &none &none &none      &none      &none                                  &none        &none        &none        &none        &none        &none
-        &none &none        &none        &bl BL_INC   &bl BL_DEC                                       &rgb_ug RGB_TOG &bl BL_TOG &none                  &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none        &none        &none
+        &none      SEL_BT(0) SEL_BT(1) SEL_BT(2)  SEL_BT(3)  SEL_BT(4) &none                                                     &trans      SEL_BT(0) SEL_BT(1)  SEL_BT(2)  SEL_BT(3) SEL_BT(4) &none
+        &none      &none     &none     &none      &none      &none     &bootloader                                               &bootloader &none     &none      &none      &none     &none     &none
+        &none      &none     &none     &none      &none      &none     BAT_LVL     CLR_BT  CLR_BT            CLR_BT CLR_BT       BAT_LVL     &none     &none      &none      &none     &none     &none
+        &none      &none     &none     &none      &none      &none         &none   &none   &none &none &none &none  &none  &none             &none     &none      &none      &none     &none     &none
+        &none      &none     &none     &bl BL_INC &bl BL_DEC               TGL_LED TGL_BL  &none             &none  TGL_BL TGL_LED                     &bl BL_INC &bl BL_DEC &none     &none     &none
       >;
     };
   };
 };
+
