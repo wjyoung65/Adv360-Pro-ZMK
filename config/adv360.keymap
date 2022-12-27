@@ -18,10 +18,10 @@
 #define MC_WJY    &macro_wjylog
 
 // Select bluetooth channel
-#define SELBT(x)  &bt BT_SEL x
+#define SEL_BT(x)  &bt BT_SEL x
 
 // toggle status LEDs
-#define TGL_LED &rgb_ug RGB_TOG
+#define TGL_LED  &rgb_ug RGB_TOG
 
 // toggle backlight LEDs
 #define TGL_BL  &bl BL_TOG
@@ -30,7 +30,7 @@
 #define CLR_BT  &bt BT_CLR
 
 // show battery level
-#define BAT_LVL &rgb_ug RGB_MEFS_CMD 5
+#define BAT_LVL  &rgb_ug RGB_MEFS_CMD 5
 
 / {
     behaviors {
