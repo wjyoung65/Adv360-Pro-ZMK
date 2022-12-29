@@ -42,6 +42,32 @@
     tap-ms = <40>;
     bindings = <&kp D>, <&kp B>, <&kp N2>;
   };
+  macro_set: macro_set {
+    compatible = "zmk,behavior-macro";
+    label = "macro_set";
+    #binding-cells = <0>;
+    wait-ms = <40>;
+    tap-ms = <40>;
+    bindings = <&kp D>, <&kp B>, <&kp N2>, <&kp S>, <&kp E>, <&kp T>;
+  };
+  macro_trc: macro_trc {
+    compatible = "zmk,behavior-macro";
+    label = "macro_trc";
+    #binding-cells = <0>;
+    wait-ms = <40>;
+    tap-ms = <40>;
+    bindings = <&kp D>, <&kp B>, <&kp N2>, <&kp T>, <&kp R>, <&kp C>;
+  };
+  macro_perf_trace: macro_perf_trace {
+    compatible = "zmk,behavior-macro";
+    label = "macro_perf_trace";
+    #binding-cells = <0>;
+    wait-ms = <40>;
+    tap-ms = <40>;
+    bindings = <&kp C>, <&kp D>, <&kp E>, <&kp LS(MINUS)>
+             , <&kp P>, <&kp E>, <&kp R>, <&kp F>, <&kp LS(MINUS)>
+             , <&kp T>, <&kp R>, <&kp A>, <&kp C>, <&kp E>;
+  };
   macro_nvim: macro_nvim {
     compatible = "zmk,behavior-macro";
     label = "macro_nvim";
