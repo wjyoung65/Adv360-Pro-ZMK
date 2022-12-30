@@ -68,6 +68,7 @@
       = <&macro_press &kp LSHFT>
       , <&macro_tap &kp C &kp D &kp E &kp MINUS &kp P &kp E &kp R &kp F &kp MINUS &kp T &kp R &kp A &kp C &kp E>
       , <&macro_release &kp LSHFT>
+      ;
   };
   macro_nvim: macro_nvim {
     compatible = "zmk,behavior-macro";
