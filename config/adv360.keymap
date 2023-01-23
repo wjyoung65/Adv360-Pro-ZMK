@@ -74,7 +74,7 @@
     fn {
       bindings = <
         &kp F1    &kp F2  &kp F3     &kp F4     &kp F5     &kp F6 &tog 1                                                       &mo 3 &kp F7   &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-        &trans    &trans  MC_WJY     &trans     &trans     MC_TOP &none                                                        &none &trans   &trans &trans &trans  &MC_PRF &trans
+        &trans    &trans  MC_WJY     &trans     &trans     MC_TOP &none                                                        &none &trans   &trans &trans &trans  MC_PRF  &trans
         &trans    &trans  &trans     MC_DB2     &trans     &trans &none          &trans &trans             &trans &trans       &none &trans   &trans &trans &trans  &trans  &trans
         &trans    &trans  &trans     MC_COPTS   &trans     &trans        &none   &none  &trans &none &none &trans &none  &none       MC_NVIM  &trans &trans &trans  &trans  &trans
         &trans    &trans  &caps_word &trans     &trans                   &kp DEL &trans &trans             &trans &trans &trans               &trans &trans &trans  &trans  &trans
