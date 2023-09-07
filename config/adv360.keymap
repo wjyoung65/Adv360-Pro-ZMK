@@ -10,6 +10,8 @@
 #define LALT_T(k)  &hm LALT k
 #define RALT_T(k)  &hm RALT k
 
+#define BT(k)      &bt BT_SEL k
+
 / {
     behaviors {
       #include "macros.dtsi"
@@ -34,7 +36,7 @@
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none &kp Y  &kp U  &kp I       &kp O       &kp P    &kp BSLH
         LCTR(ESC) &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT  &kp LGUI &kp RCTRL           &none &kp H  &kp J  &kp K       &kp L       &kp SEMI &kp SQT
         &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp PG_UP &kp HOME                           &kp N  &kp M  RCTR(COMMA) LALT_T(DOT) &kp FSLH &kp RSHFT
-        &mo 2     &kp GRAVE &kp INS  &none    &none                    &kp BSPC &kp DEL   &kp PG_DN &kp END  &kp ENTER &kp SPACE              &none  &none       &kp LBKT    &kp RBKT &mo 2
+        &mo 2     &kp GRAVE &kp INS  &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp PG_DN &kp END  &kp ENTER &kp SPACE              &kp UP &kp DOWN    &kp LBKT    &kp RBKT &mo 2
       >;
     };
     keypad {
@@ -57,11 +59,11 @@
     };
     mod {
       bindings = <
-        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                     &trans                 &none &none      &none      &none &none &none
-        &none &none        &none        &none        &none        &none        &bootloader                                                               &bootloader            &none &none      &none      &none &none &none
-        &none &none        &none        &none        &none        &none        &none                   &none &none &bt BT_CLR &none                      &rgb_ug RGB_MEFS_CMD 5 &none &none      &none      &none &none &none
-        &none &none        &none        &none        &none        &none                                      &none &none                                                        &none &none      &none      &none &none &none
-        &none &none        &none        &none        &none                                       &none &none &none &none      &bl BL_TOG &rgb_ug RGB_TOG                              &bl BL_INC &bl BL_DEC &none &none &none
+        &none     BT(0)     BT(1)    BT(2)    BT(3)      BT(4)  &none                                                 &trans                 &none &none      &none      &none &none &none
+        &none     &none     &none    &none    &none      &none  &bootloader                                           &bootloader            &none &none      &none      &none &none &none
+        &none     &none     &none    &none    &none      &none  &none      &none &none &bt BT_CLR &none               &rgb_ug RGB_MEFS_CMD 5 &none &none      &none      &none &none &none
+        &none     &none     &none    &none    &none      &none                   &none &none                                                 &none &none      &none      &none &none &none
+        &none     &none     &none    &none    &none                  &none &none &none &none      &bl BL_TOG &rgb_ug RGB_TOG                 &bl BL_INC &bl BL_DEC &none &none &none
       >;
     };
   };
