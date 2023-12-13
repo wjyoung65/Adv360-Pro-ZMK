@@ -73,7 +73,7 @@
    &kp TAB      &kp Q      &kp W       &kp E      &kp R   &kp T           &none                                                                &none   &kp Y   &kp U      &kp I       &kp O     &kp P      &kp BSLH
    LCT(ESC)     &kp A      &kp S       &kp D      &kp F   &kp G           &caps_word &kp LALT   &kp LCTRL            &kp LGUI   &kp RCTRL      &none   &kp H   &kp J      &kp K       &kp L     &kp SEMI   &kp SQT
    &kp LSHFT    &kp Z      &kp X       &kp C      &kp V   &kp B                                 &kp PG_UP            &kp HOME                          &kp N   &kp M      RCT(COMMA)  RAL(DOT)  &kp FSLH   &kp RSHFT
-   &mo 2        &kp LEFT   &kp RIGHT   LAL(DOWN)  LAL(UP)                &kp BSPC   FNK(DEL)   &kp PG_DN             &kp END    FNK(ENTER) &kp SPACE           &kp LPAR   &kp LBKT    &kp RBKT  &kp RPAR   FNK(MINUS)
+   &mo 2        &kp LEFT   &kp RIGHT   LAL(DOWN)  LAL(UP)                &kp BSPC   FNK(DEL)   &kp PG_DN             &kp END    FNK(ENTER) &kp SPACE           &kp LBRC   &kp LBKT    &kp RBKT  &kp RBRC   FNK(MINUS)
             >;
         };
 
