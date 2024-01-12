@@ -33,6 +33,9 @@
 // Layer LOWER hold-tap macro
 #define LWR(k)     &lt LOWER k
 
+// Layer KEYPAD hold-tap macro
+#define KYP(k)     &lt KEYPAD k
+
 // Bluetooth macro to tidy up the layout
 #define BT(k)      &bt BT_SEL k
 
@@ -84,9 +87,9 @@
             bindings = <
 &kp GRAVE  &kp N1    &kp N2    &kp N3    &kp N4  &kp N5   &tog KEYPAD                                                      &mo MOD &kp N6     &kp N7     &kp N8       &kp N9     &kp N0     &kp MINUS
 &kp TAB    &kp Q     &kp W     &kp E     &kp R   &kp T    &kp N6                                                           &none   &kp Y      &kp U      &kp I        &kp O      &kp P      &kp BSPC
-LCT(ESC)   &kp A     &kp S     &kp D     &kp F   &kp G    M_CAPS     &kp INS    &kp LCTRL   &kp LGUI   &kp RCTRL           &none   &kp H      &kp J      &kp K        &kp L      &kp SEMI   &kp SQT
+LCT(ESC)   &kp A     &kp S     &kp D     &kp F   &kp G    M_CAPS     &kp LGUI   &kp LCTRL   &kp INS    &kp DEL             &none   &kp H      &kp J      &kp K        &kp L      &kp SEMI   &kp SQT
 &kp LSHFT  &kp Z     &kp X     &kp C     &kp V   &kp B                          &kp PG_UP   &kp HOME                               &kp N      &kp M      RCT(COMMA)   RAL(DOT)   &kp FSLH   &kp RSHFT
-FNK(EQUAL) &kp LEFT  &kp RIGHT LAL(DOWN) LAL(UP)          LWR(SPACE) FNK(BSPC)  &kp PG_DN   &kp END    FNK(ENTER) &kp SPACE                   &kp LBRC   &kp LBKT     &kp RBKT   &kp RBRC   FNK(BSLH)
+FNK(EQUAL) &kp LEFT  &kp RIGHT LAL(DOWN) LAL(UP)          LWR(SPACE) KYP(BSPC)  LWR(PG_DN)  &kp END    FNK(ENTER) &kp SPACE                   &kp LBRC   &kp LBKT     &kp RBKT   &kp RBRC   FNK(BSLH)
             >;
         };
 
