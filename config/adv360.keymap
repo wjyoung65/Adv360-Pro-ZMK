@@ -38,8 +38,8 @@
 // backlight / led macros
 #define T_BL    &bl BL_TOG      // toggle backlight
 #define T_LED   &rgb_ug RGB_TOG // toggle status LEDs
-#define B_UP    &bl BL_INC      // backlight level increase
-#define B_DN    &bl BL_DEC      // backlight level decrease
+#define BL_UP   &bl BL_INC      // backlight level increase
+#define BL_DN   &bl BL_DEC      // backlight level decrease
 
 // Keypad shorteners
 #define KP_DIV  KP_DIVIDE
@@ -115,7 +115,7 @@ FNK(EQUAL) &kp LEFT  &kp RIGHT &kp DOWN  LAL(UP)          FNK(SPACE) KYP(BSPC)  
 &none      &none     &none     &none     &none  &none     M_BOOT                                                           M_BOOT  &none      &none      &none        &none      &none      &none
 &none      &none     &none     &none     &none  &none     &none     &none      &none       &bt BT_CLR &none                M_CHCK  &none      &none      &none        &none      &none      &none
 &none      &none     &none     &none     &none  &none                          &none       &none                                   &none      &none      &none        &none      &none      &none
-&none      &none     &none     &none     &none            &none     &none      &none       &none      T_BL       T_LED                        B_UP       B_DN         &none      &none      &none
+&none      &none     &none     BL_DN     BL_UP            &none     &none      &none       &none      T_BL       T_LED                        &none      &none         &none      &none      &none
             >;
         };
     };
