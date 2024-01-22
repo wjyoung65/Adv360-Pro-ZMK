@@ -81,11 +81,11 @@
 
         default_layer {
             bindings = <
-&kp GRAVE  &kp N1    &kp N2    &kp N3    &kp N4  &kp N5   &tog KEYPAD                                                      &mo MOD &kp N6     &kp N7     &kp N8       &kp N9     &kp N0     &kp MINUS
+&kp EQUAL  &kp N1    &kp N2    &kp N3    &kp N4  &kp N5   &tog KEYPAD                                                      &mo MOD &kp N6     &kp N7     &kp N8       &kp N9     &kp N0     &kp MINUS
 &kp TAB    &kp Q     &kp W     &kp E     &kp R   &kp T    &kp N6                                                           &none   &kp Y      &kp U      &kp I        &kp O      &kp P      &kp BSPC
 LCT(ESC)   &kp A     &kp S     &kp D     &kp F   &kp G    M_CAPS     &kp LGUI   &kp LCTRL   &kp INS    &kp DEL             &none   &kp H      &kp J      &kp K        &kp L      &kp SEMI   &kp SQT
 &kp LSHFT  &kp Z     &kp X     &kp C     &kp V   &kp B                          &kp PG_UP   &kp HOME                               &kp N      &kp M      RCT(COMMA)   RAL(DOT)   &kp FSLH   &kp RSHFT
-FNK(EQUAL) &kp GRAVE &kp RIGHT &kp DOWN  LAL(UP)          FNK(SPACE) KYP(BSPC)  FNK(PG_DN)  FNK(END)   FNK(ENTER) &kp SPACE                   &kp EQUAL  &kp LBKT     &kp RBKT   &kp BSLH   FNK(BSLH)
+FNK(GRAVE) &kp GRAVE &kp RIGHT &kp DOWN  LAL(UP)          FNK(SPACE) KYP(BSPC)  FNK(PG_DN)  FNK(END)   FNK(ENTER) &kp SPACE                   &kp EQUAL  &kp LBKT     &kp RBKT   &kp BSLH   FNK(BSLH)
             >;
         };
 
