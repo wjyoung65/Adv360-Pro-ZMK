@@ -113,7 +113,7 @@ FNK(EQUAL) &kp GRAVE &kp RIGHT &kp DOWN  LAL(UP)          FNK(BSPC)  KYP(SPACE) 
             bindings = <
 &none      BT(0)     BT(1)     BT(2)     BT(3)  BT(4)     &none                                                            &none   &none      &none      &none        &none      &none      &none
 &none      &none     &none     &none     &none  &none     M_BOOT                                                           M_BOOT  &none      &none      &none        &none      &none      &none
-&none      &none     &none     &none     &none  &none     &none     &bt BT_CLR &none       &bt BT_CLR &none                M_CHCK  &none      &none      &none        &none      &none      &none
+&none      &none     &none     &none     &none  &none     &none     &bt BT_CLR &none       &none      &none                M_CHCK  &none      &none      &none        &none      &none      &none
 &none      &none     &none     &none     &none  &none                          &none       &none                                   &none      &none      &none        &none      &none      &none
 &none      &none     &none     BL_DN     BL_UP            &none     &none      &none       &none      T_BL       T_LED                        &none      &none         &none      &none      &none
             >;
