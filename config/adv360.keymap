@@ -11,20 +11,20 @@
 #define MOD     3
 
 // Shift key hold-tap macro, homerow mod
-#define LSH(k)  &lh_pht LSHFT k
-#define RSH(k)  &rh_pht RSHFT k
+#define LSH(k)  &hm LSHFT k
+#define RSH(k)  &hm RSHFT k
 
 // Control key hold-tap macro, homerow mod
-#define LCT(k)  &lh_pht LCTRL k
-#define RCT(k)  &rh_pht RCTRL k
+#define LCT(k)  &hm LCTRL k
+#define RCT(k)  &hm RCTRL k
 
 // Alt key hold-tap macro, homerow mod
-#define LAL(k)  &lh_pht LALT k
-#define RAL(k)  &rh_pht RALT k
+#define LAL(k)  &hm LALT k
+#define RAL(k)  &hm RALT k
 
 // GUI key hold-tap macro, homerow mod
-#define LGU(k)  &lh_pht LGUI k
-#define RGU(k)  &rh_pht RGUI k
+#define LGU(k)  &hm LGUI k
+#define RGU(k)  &hm RGUI k
 
 // Layer FN hold-tap macro
 #define FNK(k)  &lt FN k
@@ -109,8 +109,8 @@
 
 // pos 28  pos 29    pos 30    pos 31    pos 32  pos 33   pos 34     pos 35      pos 36      pos 37     pos 38              pos 39  pos 40     pos 41      pos 42       pos 43      pos 44       pos 45
 &kp LCTRL  &kp A     &kp S     &kp D     &kp F   &kp G    M_CAPS     &kp LGUI    &kp LCTRL   &kp HOME   &kp END             &none   &kp H      &kp J       &kp K        &kp L       &kp SEMI     &kp SQT
-&kp LSHFT  &kp Z     LAL(X)    LCT(C)    LSH(V)  &kp B                           &kp PG_UP   &kp PG_UP                              &kp N      RSH(M)      RCT(COMMA)   RAL(DOT)    &kp FSLH     &kp RSHFT
-&kp EQUAL  &kp GRAVE &none     &none     &none            LAL(SPACE) FNK(BSPC)   KYP(PG_DN)  &kp PG_DN  FNK(ENTER) &kp SPACE                   &kp LBRC    &kp LBKT     &kp RBKT    &kp RBRC     &kp BSLH
+&kp LSHFT  &kp Z     &kp X     &kp C     &kp V   &kp B                           &kp PG_UP   &kp PG_UP                              &kp N      &kp M       RCT(COMMA)   RAL(DOT)    &kp FSLH     &kp RSHFT
+&kp EQUAL  &kp GRAVE &kp LCTL  &kp LGUI  &kp LALT         LAL(SPACE) FNK(BSPC)   KYP(PG_DN)  &kp PG_DN  FNK(ENTER) &kp SPACE                   &kp LBRC    &kp LBKT     &kp RBKT    &kp RBRC     &kp BSLH
             >;
         };
 
