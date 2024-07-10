@@ -10,20 +10,20 @@
 #define FN      2
 #define MOD     3
 
-// Shift key hold-tap macro
-#define LSH(k)  &hm LSHFT k
+// Shift key hold-tap macro, homerow mod
+#define LSH(k)  &lh_pht LSHFT k
 #define RSH(k)  &hm RSHFT k
 
-// Control key hold-tap macro
-#define LCT(k)  &hm LCTRL k
+// Control key hold-tap macro, homerow mod
+#define LCT(k)  &lh_pht LCTRL k
 #define RCT(k)  &hm RCTRL k
 
-// Alt key hold-tap macro
-#define LAL(k)  &hm LALT k
+// Alt key hold-tap macro, homerow mod
+#define LAL(k)  &lh_pht LALT k
 #define RAL(k)  &hm RALT k
 
-// GUI key hold-tap macro
-#define LGU(k)  &hm LGUI k
+// GUI key hold-tap macro, homerow mod
+#define LGU(k)  &lh_pht LGUI k
 #define RGU(k)  &hm RGUI k
 
 // Layer FN hold-tap macro
@@ -72,6 +72,18 @@
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
       };
+
+      lh_pht: left_hand_positional_hold_tap {
+        compatible = "zmk,behavior-hold-tap";
+        label = "LEFT_POSITIONAL_HOLD_TAP";
+        #binding-cells = <2>;
+        flavor = "balanced";
+        tapping-term-ms = <100>;
+        quick-tap-ms = <200>;
+        global-quick-tap;
+        bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = <7 8 9 10 11 12 13  21 22 23 24 25 26 27  37 38 39 40 41 42 43 44 45  53 54 55 56 57 58 59  68 69 70 71 72 73 74 75>;
+      };
     };
 
 
@@ -81,8 +93,11 @@
 
         default_layer {
             bindings = <
+// pos 0   pos 1     pos 2     pos 3     pos 4   pos 5    pos 6                                                             pos 7   pos 8      pos 9       pos 10       pos 11      pos 12       pos 13
 &kp ESC    &kp N1    &kp N2    &kp N3    &kp N4  &kp N5   &tog KEYPAD                                                       &mo MOD &kp N6     &kp N7      &kp N8       &kp N9      &kp N0       &kp MINUS
 &kp TAB    &kp Q     &kp W     &kp E     &kp R   &kp T    &kp N6                                                            &kp INS &kp Y      &kp U       &kp I        &kp O       &kp P        &kp BSPC
+
+// pos 28  pos 29    pos 30    pos 31    pos 32  pos 33   pos 34     pos 35      pos 36      pos 37     pos 38              pos 39  pos 40     pos 41      pos 42       pos 43      pos 44       pos 45
 &kp LCTRL  &kp A     &kp S     &kp D     &kp F   &kp G    M_CAPS     &kp LGUI    &kp LCTRL   &kp HOME   &kp END             &none   &kp H      &kp J       &kp K        &kp L       &kp SEMI     &kp SQT
 &kp LSHFT  &kp Z     LAL(X)    LCT(C)    LSH(V)  &kp B                           &kp PG_UP   &kp PG_UP                              &kp N      RSH(M)      RCT(COMMA)   RAL(DOT)    &kp FSLH     &kp RSHFT
 &kp EQUAL  &kp GRAVE &none     &none     &none            LAL(SPACE) FNK(BSPC)   KYP(PG_DN)  &kp PG_DN  FNK(ENTER) &kp SPACE                   &kp LBRC    &kp LBKT     &kp RBKT    &kp RBRC     &kp BSLH
