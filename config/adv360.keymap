@@ -12,19 +12,19 @@
 
 // Shift key hold-tap macro, homerow mod
 #define LSH(k)  &lh_pht LSHFT k
-#define RSH(k)  &hm RSHFT k
+#define RSH(k)  &rh_pht RSHFT k
 
 // Control key hold-tap macro, homerow mod
 #define LCT(k)  &lh_pht LCTRL k
-#define RCT(k)  &hm RCTRL k
+#define RCT(k)  &rh_pht RCTRL k
 
 // Alt key hold-tap macro, homerow mod
 #define LAL(k)  &lh_pht LALT k
-#define RAL(k)  &hm RALT k
+#define RAL(k)  &rh_pht RALT k
 
 // GUI key hold-tap macro, homerow mod
 #define LGU(k)  &lh_pht LGUI k
-#define RGU(k)  &hm RGUI k
+#define RGU(k)  &rh_pht RGUI k
 
 // Layer FN hold-tap macro
 #define FNK(k)  &lt FN k
@@ -83,6 +83,18 @@
         global-quick-tap;
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <7 8 9 10 11 12 13  21 22 23 24 25 26 27  37 38 39 40 41 42 43 44 45  53 54 55 56 57 58 59  68 69 70 71 72 73 74 75>;
+      };
+
+      rh_pht: right_hand_positional_hold_tap {
+        compatible = "zmk,behavior-hold-tap";
+        label = "RIGHT_POSITIONAL_HOLD_TAP";
+        #binding-cells = <2>;
+        flavor = "balanced";
+        tapping-term-ms = <100>;
+        quick-tap-ms = <200>;
+        global-quick-tap;
+        bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = <0 1 2 3 4 5 6  14 15 16 17 18 19 20  28 29 30 31 32 33 34 35 36  46 47 48 49 50 51 52  60 61 62 63 64 65 66 67>;
       };
     };
 
